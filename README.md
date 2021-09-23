@@ -61,7 +61,7 @@ Once the server is up, go to http://localhost:3000/ and you should see something
 
 ## :page_facing_up: License
 
-<a href="https://github.com/joao96/the-simplest-todo/blob/main/LICENSE">
+<a href="https://github.com/joao96/nlw-letmeask/blob/master/LICENSE">
     <img alt="License" src="https://img.shields.io/github/license/joao96/nlw-letmeask?style=flat-square">
 </a>
 
