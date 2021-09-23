@@ -21,6 +21,15 @@
     color: #835afd;
   }
 
+  &.cancel {
+    background: #dbdcdd;
+    color: #737380;
+  }
+
+  &.terminate {
+    background: #e73f5d;
+  }
+
   img {
     margin-right: 8px;
   }

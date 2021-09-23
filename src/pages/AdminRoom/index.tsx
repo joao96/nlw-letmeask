@@ -1,3 +1,5 @@
+import { useCallback, useState } from "react";
+
 import { useParams, useHistory } from "react-router-dom";
 
 import { database } from "../../services/firebase";
@@ -14,6 +16,7 @@ import { RoomCode } from "../../components/RoomCode";
 import { useRoom } from "../../hooks/useRoom";
 
 import "./styles.scss";
+import { DeletionModal } from "../../components/DeletionModal";
 
 type RoomParams = {
   id: string;
@@ -24,9 +27,10 @@ export function AdminRoom() {
   const params = useParams<RoomParams>();
   const roomId = params.id;
 
+  const [deleteRoomModalIsOpen, setDeleteRoomModalIsOpen] = useState(false);
   const { questions, title } = useRoom(roomId);
 
-  async function handleEndRoom() {
+  const handleEndRoom = useCallback(async () => {
     await database
       .ref(`rooms/${roomId}`)
       .update({
@@ -42,7 +46,7 @@ export function AdminRoom() {
       });
 
     history.push("/");
-  }
+  }, [history, roomId]);
 
   async function handleDeleteQuestion(questionId: string) {
     if (window.confirm("Tem certeza que você deseja excluir esta pergunta?")) {
@@ -99,70 +103,84 @@ export function AdminRoom() {
   }
 
   return (
-    <div id="page-room">
-      <header>
-        <div className="content">
-          <img src={logoImg} alt="Letmeask" />
-          <div>
-            <RoomCode code={roomId} />
-            <Button onClick={handleEndRoom} isOutlined>
-              Encerrar sala
-            </Button>
+    <>
+      <div id="page-room">
+        <header>
+          <div className="content">
+            <img src={logoImg} alt="Letmeask" />
+            <div>
+              <RoomCode code={roomId} />
+              <Button onClick={() => setDeleteRoomModalIsOpen(true)} isOutlined>
+                Encerrar sala
+              </Button>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <main>
-        <div className="room-title">
-          <h1>Sala {title}</h1>
-          {questions.length > 0 && <span>{questions.length} pergunta(s)</span>}
-        </div>
+        <main>
+          <div className="room-title">
+            <h1>Sala {title}</h1>
+            {questions.length > 0 && (
+              <span>{questions.length} pergunta(s)</span>
+            )}
+          </div>
 
-        <div className="question-list">
-          {questions.map((question) => {
-            return (
-              <Question
-                key={question.id}
-                content={question.content}
-                author={question.author}
-                isAnswered={question.isAnswered}
-                isHighlighted={question.isHighlighted}
-              >
-                {!question.isAnswered && (
-                  <>
-                    <button
-                      type="button"
-                      onClick={() => handleCheckQuestionAsAnswered(question.id)}
-                    >
-                      <img
-                        src={checkImg}
-                        alt="Marcar pergunta como respondida"
-                      />
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() =>
-                        handleHighlightQuestion(
-                          question.id,
-                          question.isHighlighted
-                        )
-                      }
-                    >
-                      <img src={answerImg} alt="Dar destaque à pergunta" />
-                    </button>
-                  </>
-                )}
-                <button
-                  type="button"
-                  onClick={() => handleDeleteQuestion(question.id)}
+          <div className="question-list">
+            {questions.map((question) => {
+              return (
+                <Question
+                  key={question.id}
+                  content={question.content}
+                  author={question.author}
+                  isAnswered={question.isAnswered}
+                  isHighlighted={question.isHighlighted}
                 >
-                  <img src={deleteImg} alt="Remover pergunta" />
-                </button>
-              </Question>
-            );
-          })}
-        </div>
-      </main>
-    </div>
+                  {!question.isAnswered && (
+                    <>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          handleCheckQuestionAsAnswered(question.id)
+                        }
+                      >
+                        <img
+                          src={checkImg}
+                          alt="Marcar pergunta como respondida"
+                        />
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() =>
+                          handleHighlightQuestion(
+                            question.id,
+                            question.isHighlighted
+                          )
+                        }
+                      >
+                        <img src={answerImg} alt="Dar destaque à pergunta" />
+                      </button>
+                    </>
+                  )}
+                  <button
+                    type="button"
+                    onClick={() => handleDeleteQuestion(question.id)}
+                  >
+                    <img src={deleteImg} alt="Remover pergunta" />
+                  </button>
+                </Question>
+              );
+            })}
+          </div>
+        </main>
+      </div>
+      <DeletionModal
+        paragraph="Tem certeza que você deseja encerrar esta sala?"
+        title="Encerrar sala"
+        terminateText="Sim, encerrar"
+        isOpen={deleteRoomModalIsOpen}
+        onRequestClose={() => setDeleteRoomModalIsOpen(false)}
+        onRequestTerminate={handleEndRoom}
+      />
+    </>
   );
 }
