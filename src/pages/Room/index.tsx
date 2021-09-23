@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import { useParams } from "react-router-dom";
+import toast from "react-hot-toast";
 
 import logoImg from "../../assets/images/logo.svg";
 import { Button } from "../../components/Button";
@@ -44,7 +45,15 @@ export function Room() {
       isAnswered: false,
     };
 
-    await database.ref(`rooms/${roomId}/questions`).push(question);
+    await database
+      .ref(`rooms/${roomId}/questions`)
+      .push(question)
+      .then(() => {
+        toast.success("Pergunta enviada!");
+      })
+      .catch((err) => {
+        toast.error("Não foi possível enviar a pergunta.");
+      });
 
     setNewQuestion("");
   }

@@ -5,6 +5,7 @@ import { NewRoom } from "./pages/NewRoom";
 import { AuthContextProvider } from "./contexts/AuthContext";
 import { Room } from "./pages/Room";
 import { AdminRoom } from "./pages/AdminRoom";
+import { MyToaster } from "./components/MyToaster";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/admin/rooms/:id" component={AdminRoom} />
         </Switch>
       </AuthContextProvider>
+      <MyToaster />
     </BrowserRouter>
   );
 }
