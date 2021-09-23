@@ -81,10 +81,11 @@ On the other hand, if you created a room, you're able mark question as answered 
 
 I will be adding the following features over time:
 
-[:heavy_check_mark:] Nice looking README
-- [ ] Toast for creating room and questions
+- [:heavy_check_mark:] Nice looking README
+- [:heavy_check_mark:] Toast for creating room and questions
+- [:heavy_check_mark:] Nav to admin page after creating room
 - [ ] Modal to delete question
-- [ ] Nav to admin page after creating room
+
 - [ ] Responsiveness
 - [ ] Dark theme
 - [ ] Styled Components
