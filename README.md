@@ -1,46 +1,107 @@
-# Getting Started with Create React App
+<h1 align="center">
+    <img alt="to-do" src="src/assets/images/logo.svg" />
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center">
+  Create realtime Q&A rooms for your meetings!
+</h4>
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/joao96/nlw-letmeask?style=flat-square">
 
-## Available Scripts
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/joao96/nlw-letmeask?style=flat-square">
+  <img alt="License" src="https://img.shields.io/github/license/joao96/nlw-letmeask?style=flat-square">
+</p>
 
-In the project directory, you can run:
+<p align="center">
+  <a href="#checkered_flag-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#information_source-setup">Setup</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#sparkles-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#construction-work-in-progress">Work In Progress</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#page_facing_up-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#get-in-touch-monocle_face">Get in touch</a>
+</p>
 
-### `yarn start`
+## :checkered_flag: Technologies
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [React JS](https://pt-br.reactjs.org/docs/getting-started.html)
+- [Firebase SDK](https://firebase.google.com/docs/web/setup?hl=pt-br)
+- [node-sass](https://www.npmjs.com/package/node-sass)
+- [classnames](https://github.com/JedWatson/classnames)
+- [VS Code][vc] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## :information_source: Setup
 
-### `yarn test`
+In order to run this application, it's required that you have [Git](https://git-scm.com), [Node.js v10.16][nodejs] or higher + [Yarn v1.13][yarn] or higher installed on your computer. From your command line:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Step 1:** Clone this repo & run a `cd` into project's folder.
 
-### `yarn build`
+**Step 2:** install node modules as below:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+if you prefer:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+yarn
+```
 
-### `yarn eject`
+**Step 3:**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+yarn dev
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Once the server is up, go to http://localhost:3000/ and you should see something like this:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<p align="center">
+  <img src="src/assets/images/cover.png" alt="Initial page">
+</p>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## :page_facing_up: License
 
-## Learn More
+<a href="https://github.com/joao96/the-simplest-todo/blob/main/LICENSE">
+    <img alt="License" src="https://img.shields.io/github/license/joao96/nlw-letmeask?style=flat-square">
+</a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br />
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This project is licensed under the GPL-3.0.
+
+## :sparkles: How To Use
+
+Since this is a static application, there is no authentication logic. In order to navigate from the Login page to the Dashboard page, you need to alter the URL to the following: 
+
+Create your own room by logging in using your Google Account or join an existing room by entering the code. If you just joined in, you can check out other people's question and react to them or create your own!
+
+On the other hand, if you created a room, you're able mark question as answered or give them a highlight status. If you wish, you can delete questions as well. 
+
+## :construction: Work In Progress
+
+I will be adding the following features over time:
+
+[:heavy_check_mark:] Nice looking README
+- [ ] Toast for creating room and questions
+- [ ] Modal to delete question
+- [ ] Nav to admin page after creating room
+- [ ] Responsiveness
+- [ ] Dark theme
+- [ ] Styled Components
+
+
+
+## Get in touch! :monocle_face:
+
+[![Linkedin Badge](https://img.shields.io/badge/-João%20Victor%20Poletti-0e76a8?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/jvpoletti/)](https://www.linkedin.com/in/jvpoletti/)
+[![Gmail Badge](https://img.shields.io/badge/-jvpoletti@gmail.com-ff512f?style=flat-square&logo=Gmail&logoColor=white&link=mailto:jvpoletti@gmail.com)](mailto:jvpoletti@gmail.com)
+
+<br />
+
+Made with :green_heart: by [João Victor Poletti](https://github.com/joao96)
+
+[nodejs]: https://nodejs.org/
+[yarn]: https://yarnpkg.com/
+[vc]: https://code.visualstudio.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
