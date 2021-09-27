@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes } from "react";
 import cx from "classnames";
 
-import "./styles.scss";
+import { DefaultButton } from "./styles";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   isOutlined?: boolean;
@@ -16,7 +16,7 @@ export function Button({
   ...rest
 }: ButtonProps) {
   return (
-    <button
+    <DefaultButton
       className={cx(
         "button",
         { outlined: isOutlined },

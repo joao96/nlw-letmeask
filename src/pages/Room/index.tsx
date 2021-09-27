@@ -10,7 +10,7 @@ import { useAuth } from "../../hooks/useAuth";
 import { useRoom } from "../../hooks/useRoom";
 import { database } from "../../services/firebase";
 
-import "./styles.scss";
+import { Content, Header, MainContainer } from "./styles";
 
 type RoomParams = {
   id: string;
@@ -75,14 +75,14 @@ export function Room() {
 
   return (
     <div id="page-room">
-      <header>
-        <div className="content">
+      <Header>
+        <Content>
           <img src={logoImg} alt="Letmeask" />
           <RoomCode code={roomId} />
-        </div>
-      </header>
+        </Content>
+      </Header>
 
-      <main>
+      <MainContainer>
         <div className="room-title">
           <h1>Sala {title}</h1>
           {questions.length > 0 && <span>{questions.length} pergunta(s)</span>}
@@ -155,7 +155,7 @@ export function Room() {
             );
           })}
         </div>
-      </main>
+      </MainContainer>
     </div>
   );
 }

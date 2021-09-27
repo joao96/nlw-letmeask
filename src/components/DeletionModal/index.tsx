@@ -1,6 +1,6 @@
 import Modal from "react-modal";
 import { IoIosCloseCircleOutline } from "react-icons/io";
-import "./styles.scss";
+import { Container } from "./styles";
 import { Button } from "../Button";
 
 interface DeletionModalProps {
@@ -29,7 +29,7 @@ export function DeletionModal({
       overlayClassName="react-modal-overlay"
       className="react-modal-content"
     >
-      <main className="container">
+      <Container>
         <span>
           <IoIosCloseCircleOutline size={50} color="#E73F5D" />
         </span>
@@ -43,7 +43,7 @@ export function DeletionModal({
             {terminateText}
           </Button>
         </div>
-      </main>
+      </Container>
     </Modal>
   );
 }
