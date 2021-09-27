@@ -84,7 +84,7 @@ I will be adding the following features over time:
 - [:heavy_check_mark:] Nice looking README
 - [:heavy_check_mark:] Toast for creating room and questions
 - [:heavy_check_mark:] Nav to admin page after creating room
-- [ ] Modal to delete question
+- [:heavy_check_mark:] Modal to close room
 
 - [ ] Responsiveness
 - [ ] Dark theme
