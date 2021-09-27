@@ -85,10 +85,11 @@ I will be adding the following features over time:
 - [:heavy_check_mark:] Toast for creating room and questions
 - [:heavy_check_mark:] Nav to admin page after creating room
 - [:heavy_check_mark:] Modal to close room
+- [:heavy_check_mark:] Styled Components
 
 - [ ] Responsiveness
 - [ ] Dark theme
-- [ ] Styled Components
+
 
 
 
