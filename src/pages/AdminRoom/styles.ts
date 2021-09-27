@@ -38,7 +38,7 @@ export const MainContainer = styled.main`
     h1 {
       font-family: "Poppins", sans-serif;
       font-size: 24px;
-      color: #29292e;
+      color: ${({ theme }) => theme.text};
     }
 
     span {

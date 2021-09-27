@@ -16,7 +16,8 @@ import { RoomCode } from "../../components/RoomCode";
 import { useRoom } from "../../hooks/useRoom";
 
 import { DeletionModal } from "../../components/DeletionModal";
-import { Content, Header, MainContainer } from "./styles";
+import { Content, MainContainer } from "./styles";
+import { Header } from "../../components/Header";
 
 type RoomParams = {
   id: string;
@@ -105,17 +106,7 @@ export function AdminRoom() {
   return (
     <>
       <div id="page-room">
-        <Header>
-          <Content className="content">
-            <img src={logoImg} alt="Letmeask" />
-            <div>
-              <RoomCode code={roomId} />
-              <Button onClick={() => setDeleteRoomModalIsOpen(true)} isOutlined>
-                Encerrar sala
-              </Button>
-            </div>
-          </Content>
-        </Header>
+        <Header roomId={roomId} />
 
         <MainContainer>
           <div className="room-title">

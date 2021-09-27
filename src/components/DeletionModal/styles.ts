@@ -12,6 +12,7 @@ export const Container = styled.main`
   h3 {
     font-family: "Poppins";
     margin-bottom: 10px;
+    color: #29292E;
   }
 
   p {
