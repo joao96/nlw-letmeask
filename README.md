@@ -71,11 +71,11 @@ This project is licensed under the GPL-3.0.
 
 ## :sparkles: How To Use
 
-Since this is a static application, there is no authentication logic. In order to navigate from the Login page to the Dashboard page, you need to alter the URL to the following: 
+Since this is a static application, there is no authentication logic. In order to navigate from the Login page to the Dashboard page, you need to alter the URL to the following:
 
 Create your own room by logging in using your Google Account or join an existing room by entering the code. If you just joined in, you can check out other people's question and react to them or create your own!
 
-On the other hand, if you created a room, you're able mark question as answered or give them a highlight status. If you wish, you can delete questions as well. 
+On the other hand, if you created a room, you're able mark question as answered or give them a highlight status. If you wish, you can delete questions as well.
 
 ## :construction: Work In Progress
 
@@ -86,12 +86,9 @@ I will be adding the following features over time:
 - [:heavy_check_mark:] Nav to admin page after creating room
 - [:heavy_check_mark:] Modal to close room
 - [:heavy_check_mark:] Styled Components
+- [:heavy_check_mark:] Dark theme
 
 - [ ] Responsiveness
-- [ ] Dark theme
-
-
-
 
 ## Get in touch! :monocle_face:
 
