@@ -25,7 +25,8 @@
 
 - [React JS](https://pt-br.reactjs.org/docs/getting-started.html)
 - [Firebase SDK](https://firebase.google.com/docs/web/setup?hl=pt-br)
-- [node-sass](https://www.npmjs.com/package/node-sass)
+- [styled-components](https://styled-components.com/)
+- [react-dark-mode-toggle](https://www.npmjs.com/package/react-dark-mode-toggle)
 - [classnames](https://github.com/JedWatson/classnames)
 - [VS Code][vc] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
 
