@@ -16,7 +16,7 @@
   <a href="#checkered_flag-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-setup">Setup</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#sparkles-how-to-use">How To Use</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#construction-work-in-progress">Work In Progress</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#triangular_flag_on_post-work-in-progress">Work In Progress</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#page_facing_up-license">License</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#get-in-touch-monocle_face">Get in touch</a>
 </p>
@@ -77,7 +77,7 @@ Create your own room by logging in using your Google Account or join an existing
 
 On the other hand, if you created a room, you're able mark question as answered or give them a highlight status. If you wish, you can delete questions as well.
 
-## :construction: Work In Progress
+## :triangular_flag_on_post: Features
 
 I will be adding the following features over time:
 
@@ -87,8 +87,7 @@ I will be adding the following features over time:
 - [:heavy_check_mark:] Modal to close room
 - [:heavy_check_mark:] Styled Components
 - [:heavy_check_mark:] Dark theme
-
-- [ ] Responsiveness
+- [:heavy_check_mark:] Responsiveness
 
 ## Get in touch! :monocle_face:
 
