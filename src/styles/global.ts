@@ -7,6 +7,10 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
+  html {
+    font-size: 62.5%;
+  }
+
   body {
     background: ${({ theme }) => theme.body};
     color: ${({ theme }) => theme.text};
@@ -16,7 +20,7 @@ export const GlobalStyle = createGlobalStyle`
   input,
   button,
   textarea {
-    font: 400 16px "Roboto", sans-serif;
+    font: 400 1.6rem "Roboto", sans-serif;
   }
 
   .react-modal-overlay {

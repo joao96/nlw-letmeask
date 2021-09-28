@@ -24,16 +24,32 @@ export const Aside = styled.aside`
   }
 
   strong {
-    font: 700 36px 'Poppins', sans-serif;
-    line-height: 42px;
+    font: 700 3.6rem 'Poppins', sans-serif;
+    line-height: 4.2rem;
     margin-top: 16px;
   }
 
   p {
-    font-size: 24px;
-    line-height: 32px;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
     margin-top: 16px;
     color: #f8f8f8;
+  }
+
+  @media(max-width: 900px) {
+    flex: 4;
+    padding: 40px 40px;
+    strong {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  @media(max-width: 720px) {
+    display: none;
   }
 `;
 
@@ -46,6 +62,10 @@ export const Main = styled.main`
 
   align-items: center;
   justify-content: center;
+
+  @media(max-width: 900px) {
+    flex: 4;
+  }
 `;
 
 export const Content = styled.div`
