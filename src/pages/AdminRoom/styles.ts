@@ -55,4 +55,26 @@ export const MainContainer = styled.main`
   .question-list {
     margin-top: 32px;
   }
+
+  @media (max-width: 900px) {
+    max-width: 80vw;
+    form {
+      textarea {
+        min-height: 100px;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .room-title {
+      h1 {
+        font-size: 2rem;
+      }
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1.6rem;
+    }
+  }
 `;

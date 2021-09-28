@@ -14,7 +14,9 @@ export function Header({ roomId }: HeaderProps) {
         <img src={logoImg} alt="Letmeask" />
         <Interaction>
           <RoomCode code={roomId} />
-          <ThemeToggleButton />
+          <div className="theme-toggle">
+            <ThemeToggleButton />
+          </div>
         </Interaction>
       </Content>
     </Container>

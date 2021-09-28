@@ -10,7 +10,7 @@ export function ThemeToggleButton() {
     <DarkModeToggle
       onChange={toggleTheme}
       checked={theme?.name === "dark"}
-      size={80}
+      size={60}
     />
   );
 }

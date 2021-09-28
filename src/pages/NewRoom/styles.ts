@@ -35,6 +35,22 @@ export const Aside = styled.aside`
     margin-top: 16px;
     color: #f8f8f8;
   }
+
+  @media(max-width: 900px) {
+    flex: 4;
+    padding: 40px 40px;
+    strong {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  @media(max-width: 750px) {
+    display: none;
+  }
 `;
 
 export const Main = styled.main`

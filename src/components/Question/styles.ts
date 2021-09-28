@@ -85,4 +85,29 @@ export const QuestionContainer = styled.div.attrs(props => ({
     }
   }
 
+  @media (max-width: 900px) {
+    max-width: 80vw;
+    p {
+      font-size: 1.4rem;
+    }
+    
+    footer {
+      .user-info {
+        span {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 430px) {
+    footer {
+      .user-info {
+        span {
+          display: none;
+        }
+      }
+    }
+  }
+
 `

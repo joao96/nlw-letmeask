@@ -24,6 +24,26 @@ export const Content = styled.div`
       height: 40px;
     }
   }
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+  }
+
 `;
 
-export const Interaction = styled.div``;
+export const Interaction = styled.div`
+  .theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 450px) {
+    .theme-toggle {
+      display: none;
+    }
+  }
+`;
